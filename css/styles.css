@@ -1,40 +1,93 @@
-
+@keyframes bluePaletteBackground {
+    0% {
+      background-color: #8fdcef; /* Primary blue */
+    }
+    25% {
+      background-color: #5eaafb; /* Darker blue */
+    }
+    50% {
+      background-color: #8fdcef; /* Light blue */
+    }
+    75% {
+      background-color: #5eaafb;   /* Sky blue */
+    }
+    100% {
+      background-color: #8fdcef; /* Primary blue */
+    }
+  }
 body {
-    font-family: arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-    font-size: large;
-    background-color: #8fb9e3;
-    color: #01579b;
+    animation: bluePaletteBackground 8s infinite;
+    animation-timing-function: ease-in-out;
+    font-family: Arial, sans-serif;
+    background-color: #9dccff;
+}
+
+header, footer {
     
+    background-color: #2da5f6;
+    color: #f0f8ff;
 }
 
-header {
-    background-color: #0288d1;
-    padding: 1em;
-    text-align: center;
+h1, h2 {
+    color: #042b45;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* Навигационен бар */
+.navbar {
+    background-color: #48bee9!important;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
 }
 
-nav ul li a {
-    color: white;
+.navbar-toggler {
+    background-color: #005b99 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #cce7ff !important;
+}
+
+/* Основно съдържание */
+main h2 {
+    color: #003366;
+}
+
+main p {
+    color: #005b99;
+}
+
+footer p {
+    color: #f0f8ff;
+}
+
+
+
+
+.logo img {
+    height: 80px; /* Adjust the height as needed */
+    width: auto;
+}
+
+.logo {
     text-decoration: none;
 }
 
-section {
-    margin: 2em 0;
-}
 
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #0288d1;
-    color: white;
+/* Мобилна адаптивност */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
 }

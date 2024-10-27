@@ -1,0 +1,8 @@
+
+body { background-color: #e0f7fa; color: #01579b; }
+.navbar { background-color: #0288d1; }
+.navbar-brand, .nav-link { color: white !important; }
+.footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; position: absolute; bottom: 0; width: 100%; }
+.train-section { padding: 50px 0; }
+.train-section img { max-width: 100%; height: auto; border-radius: 8px; }
+.btn-info { background-color: #0277bd; color: white; }
