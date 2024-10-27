@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trains</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
     <style>
         body { background-color: #e0f7fa; color: #01579b; }
         .navbar { background-color: #0288d1; }
         .navbar-brand, .nav-link { color: white !important; }
-        .footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; position: absolute; bottom: 0; width: 100%; }
+        .footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; }
         .train-section { padding: 50px 0; }
-        .train-section img { max-width: 100%; height: auto; border-radius: 8px; }
-        .btn-info { background-color: #0277bd; color: white; }
+        .train-section img { max-width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s; }
+        .train-section img:hover { transform: scale(1.05); }
+        .btn-info { background-color: #0277bd; color: white; transition: background-color 0.3s; }
+        .btn-info:hover { background-color: #01579b; }
+        .extra-space { padding: 150px 0; }
     </style>
 </head>
 <body>
@@ -30,36 +33,73 @@
         </div>
     </nav>
 
-    <section class="train-section">
+    <section class="train-section" data-aos="fade-up">
         <div class="container">
             <h2>All Trains</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <img src="images/train4.jpg">
-                    <p>Train 4-Shinkansen N700.</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/train4.jpg" alt="Train 4">
+                    <p>Train 4 - Shinkansen N700.</p>
                     <a href="train4.html" class="btn btn-info">More Info</a>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/train5.jpg" alt="Train 2">
-                    <p>train 5-Frecciarossa 1000.</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/train5.jpg" alt="Train 5">
+                    <p>Train 5 - Frecciarossa 1000.</p>
                     <a href="train5.html" class="btn btn-info">More Info</a>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/train6.jpg" alt="Train 3">
-                    <p>train 6-ICE 4.</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/train6.jpg" alt="Train 6">
+                    <p>Train 6 - ICE 4.</p>
                     <a href="train6.html" class="btn btn-info">More Info</a>
                 </div>
-                <div class="col-md-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eurostar_e320_2015_at_London_St_Pancras.jpg/320px-Eurostar_e320_2015_at_London_St_Pancras.jpg" alt="Train 1">
-                    <p>Eurostar e320.</p>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/train7.jpg" alt="Train 7">
+                    <p>Train 7 - Alstom Coradia.</p>
                     <a href="train7.html" class="btn btn-info">More Info</a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/train8.jpg" alt="Train 8">
+                    <p>Train 8 - AVE Class 100.</p>
+                    <a href="train8.html" class="btn btn-info">More Info</a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/train9.jpg" alt="Train 9">
+                    <p>Train 9 - Thalys PBKA.</p>
+                    <a href="train9.html" class="btn btn-info">More Info</a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
+                    <img src="images/train10.jpg" alt="Train 10">
+                    <p>Train 10 - Renfe AVLO.</p>
+                    <a href="train10.html" class="btn btn-info">More Info</a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                    <img src="images/train11.jpg" alt="Train 11">
+                    <p>Train 11 - Hitachi Class 800.</p>
+                    <a href="train11.html" class="btn btn-info">More Info</a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
+                    <img src="images/train12.jpg" alt="Train 12">
+                    <p>Train 12 - Acela Express.</p>
+                    <a href="train12.html" class="btn btn-info">More Info</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="extra-space"></div>
+
     <footer class="footer">
         <p>Train Enthusiast © 2024</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 </html>

@@ -6,14 +6,17 @@
     <title>Train Maniac.com</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="container-fluid text-center py-4 position-relative">
+    <header class="container-fluid text-center py-4 position-relative" data-aos="fade-down">
         <a href="index.html" class="logo">
             <img src="logo/logo.png" alt="Logo">
         </a>
-
-        <h1>Welcome to Train Maniac.com</h1>
+        <h1>Welcome to Train Maniac</h1>
         <p>Dive into the world of trains!</p>
     </header>
 
@@ -25,27 +28,49 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="train1.html">Train 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="train2.html">Train 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="train3.html">Train 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train1.html">Train 1-Eurostar e320</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train2.html">Train 2-TGV France</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train3.html">Train 3-HEMU-430X</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container mt-5">
-        <section class="text-center">
+        <section class="text-center" data-aos="fade-up">
             <h2>Welcome to our train fan website!</h2>
             <p>Learn about the different types of trains! Feel welcomed to dive into our world of trains!</p>
         </section>
-    </main>
 
-    <footer class="container-fluid text-center py-3 mt-5">
+       
+
+    <footer class="container-fluid text-center py-3 mt-5" data-aos="fade-up">
         <h1>Train Maniac.com &copy; 2024</h1>
-        <p>Made by Radoslav Djolev - Aka @sakatiq </p>
+        <p>Made by Radoslav Djolev - Aka @sakatiq</p>
+        <div>
+           
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                dots: true
+            });
+        });
+    </script>
 </body>
 </html>

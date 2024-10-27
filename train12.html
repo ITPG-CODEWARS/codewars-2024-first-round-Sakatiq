@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brightline</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
     <style>
-        body { background-color: #e0f7fa; color: #01579b; }
-        .navbar { background-color: #0288d1; }
-        .navbar-brand, .nav-link { color: white !important; }
-        .footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; position: absolute; bottom: 0; width: 100%; }
-        .train-section { padding: 50px 0; }
-        .train-section img { max-width: 100%; height: auto; border-radius: 8px; }
-        .btn-info { background-color: #0277bd; color: white; }
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            color: #01579b;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #0288d1;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0288d1;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .train-section {
+            padding: 50px 0;
+        }
+        .train-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .train-section img:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Train Enthusiast</a>
+            <a class="navbar-brand" href="index.html">Train Maniac</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -30,16 +80,39 @@
         </div>
     </nav>
 
-    <section class="train-section">
+    <section class="train-section" data-aos="fade-up">
         <div class="container">
             <h2>Brightline</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Brightline_train_Miami.jpg/320px-Brightline_train_Miami.jpg" alt="Brightline">
-            <p>Brightline is a modern, eco-friendly train operating in the United States.</p>
+            <div class="image-gallery">
+                <img src="images/train12a.jpg" alt="Brightline Train Exterior">
+                <img src="images/train12b.jpg" alt="Brightline Train Interior">
+                <img src="images/train12c.jpg" alt="Brightline Train in Motion">
+                <img src="images/train12d.jpg" alt="Brightline Scenic View">
+            </div>
+            <p>Brightline is a high-speed rail service in Florida, known for connecting major cities along the southeastern coast of the state. Launched in 2018, Brightline aims to provide a fast, efficient, and environmentally friendly alternative to driving or flying between key destinations such as Miami, Fort Lauderdale, and West Palm Beach.</p>
+
+            <p>The service operates on a 235-mile route, featuring modern trains capable of reaching speeds of up to 125 mph (approximately 201 km/h). Brightline trains are designed for passenger comfort, boasting spacious seating, ample legroom, and onboard amenities such as complimentary Wi-Fi, power outlets, and food and beverage options available for purchase.</p>
+                
+            <p>Brightline’s stations are strategically located near major urban centers, making it convenient for travelers to access the service. The stations themselves are designed with modern architecture and amenities, providing a welcoming environment for passengers.</p>
+                
+            <p>In addition to its current routes, Brightline has plans for expansion, including a potential extension to Orlando and other areas, which would further enhance connectivity in Florida. The service promotes sustainability by encouraging public transportation use and reducing traffic congestion, aligning with broader efforts to create a more environmentally responsible transit system.</p>
+                
+            <p>Overall, Brightline represents a significant step forward in high-speed rail travel in the U.S., offering a modern and efficient transportation option that caters to both residents and visitors in Florida.</p>
         </div>
     </section>
 
     <footer class="footer">
-        <p>Train Enthusiast © 2024</p>
+        <p>Train Maniac © 2024</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Renfe AVLO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
     <style>
-        body { background-color: #e0f7fa; color: #01579b; }
-        .navbar { background-color: #0288d1; }
-        .navbar-brand, .nav-link { color: white !important; }
-        .footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; position: absolute; bottom: 0; width: 100%; }
-        .train-section { padding: 50px 0; }
-        .train-section img { max-width: 100%; height: auto; border-radius: 8px; }
-        .btn-info { background-color: #0277bd; color: white; }
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            color: #01579b;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #0288d1;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0288d1;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .train-section {
+            padding: 50px 0;
+        }
+        .train-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .train-section img:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Train Enthusiast</a>
+            <a class="navbar-brand" href="index.html">Train Maniac</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -30,16 +80,37 @@
         </div>
     </nav>
 
-    <section class="train-section">
+    <section class="train-section" data-aos="fade-up">
         <div class="container">
             <h2>Renfe AVLO</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Renfe_AVLO.jpg/320px-Renfe_AVLO.jpg" alt="Renfe AVLO">
-            <p>Renfe AVLO is a low-cost high-speed train service operating in Spain.</p>
+            <div class="image-gallery">
+                <img src="images/train10a.jpg" alt="Renfe AVLO">
+                <img src="images/train10b.jpg" alt="Renfe AVLO Interior">
+                <img src="images/train10c.jpg" alt="Renfe AVLO in Motion">
+                <img src="images/train10d.jpg" alt="Renfe AVLO Scenic View">
+            </div>
+            <p>Renfe AVLO is a high-speed train service launched by Renfe, Spain's national railway operator, in 2021. This service aims to provide affordable travel options within Spain's extensive high-speed rail network. AVLO is designed to make train travel accessible to a broader audience, offering competitive pricing while ensuring a comfortable experience.</p>
+
+            <p>The AVLO trains are modern and feature comfortable seating with ample legroom. Passengers can enjoy amenities such as Wi-Fi, power outlets, and onboard food and beverage options. The trains can travel at speeds of up to 300 km/h (approximately 186 mph), significantly reducing travel times between major cities like Madrid, Barcelona, and Valencia.</p>
+            
+            <p>By connecting these key destinations, AVLO provides convenience for both tourists and residents, catering to those looking for budget-friendly travel options. Additionally, the service emphasizes sustainability, offering a greener alternative to car and air travel, thus supporting efforts to reduce carbon emissions in Spain.</p>
+            
+            <p>Overall, Renfe AVLO represents a commitment to making high-speed rail travel not only efficient and comfortable but also environmentally responsible, enhancing the travel experience for all.</p>
         </div>
     </section>
 
     <footer class="footer">
-        <p>Train Enthusiast © 2024</p>
+        <p>Train Maniac © 2024</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 </html>

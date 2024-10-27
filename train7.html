@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alstom Coradia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
     <style>
-        body { background-color: #e0f7fa; color: #01579b; }
-        .navbar { background-color: #0288d1; }
-        .navbar-brand, .nav-link { color: white !important; }
-        .footer { text-align: center; padding: 20px; background-color: #0288d1; color: white; position: absolute; bottom: 0; width: 100%; }
-        .train-section { padding: 50px 0; }
-        .train-section img { max-width: 100%; height: auto; border-radius: 8px; }
-        .btn-info { background-color: #0277bd; color: white; }
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            color: #01579b;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #0288d1;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0288d1;
+            color: white;
+            position: relative; /* Changed to relative */
+            bottom: 0;
+            width: 100%;
+        }
+        .train-section {
+            padding: 50px 0;
+        }
+        .train-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .train-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .btn-info {
+            background-color: #0277bd;
+            color: white;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn-info:hover {
+            background-color: #01579b;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Train Enthusiast</a>
+            <a class="navbar-brand" href="index.html">Train Maniac</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -30,16 +90,33 @@
         </div>
     </nav>
 
-    <section class="train-section">
+    <section class="train-section" data-aos="fade-up">
         <div class="container">
             <h2>Alstom Coradia</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Alstom_Coradia.jpg/320px-Alstom_Coradia.jpg" alt="Alstom Coradia">
-            <p>The Alstom Coradia is a regional train that operates in several European countries.</p>
+            <div class="image-gallery">
+                <img src="images/train7a.jpg" alt="Alstom Coradia">
+                <img src="images/train7b.jpg" alt="Alstom Coradia">
+                <img src="images/train7c.jpg" alt="Alstom Coradia">
+                <img src="images/train7d.jpg" alt="Alstom Coradia">
+            </div>
+            <p>The Alstom Coradia is a versatile family of regional and intercity trains designed by Alstom to provide efficient and sustainable rail services across Europe and beyond. Known for their adaptability and modular design, Coradia trains come in various models, including the Coradia Lint, Coradia Continental, and Coradia iLint. They operate at speeds of up to 160 km/h (99 mph), providing reliable transport across both urban and rural routes. The Coradia series is particularly valued for its flexibility, with configurations available for single- or double-decker models, different passenger capacities, and various levels of onboard comfort.
+
+            A standout model in the Coradia range is the Coradia iLint, the world’s first hydrogen fuel cell passenger train, which emits only water vapor and offers a clean, quiet alternative to diesel-powered trains. Coradia trains are also equipped with modern amenities, including air conditioning, Wi-Fi, and accessibility features to enhance passenger comfort. Built with sustainability in mind, the Coradia range is energy-efficient and focuses on reducing operational costs for operators while supporting eco-friendly transit solutions for communities worldwide.</p>
         </div>
     </section>
 
     <footer class="footer">
-        <p>Train Enthusiast © 2024</p>
+        <p>Train Maniac © 2024</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 </html>
